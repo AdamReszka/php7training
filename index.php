@@ -1,11 +1,11 @@
 <?php
-# konkatenacja
-  $price = 899;
-  $symbol = 'zł';
+# tablice
+$frameworks = array('Symphony','Zend','Laravel');
+$frameworks2 = ['Symphony','Zend','Laravel']; // to jest nowszy sposób
+//echo $frameworks; to nie zadziała na tablicę
+//dodanie kolejnego elementu jest prostrze niż push z jsa a wygląda tak
+$frameworks2[] = 'CakePHP';
 
-# operatorem łączenia w php nie jest + jak w JS tylko kropka
-  echo 'Cena: ' . $price . $symbol;
-  echo "Cena: $price$symbol"; //tak można też konkatenować ale musi być cudzysłów a nie apostrof
-  $phrase = '"A to jest cytat z widocznym cudzysłowem"';
-  $english = 'It\'s a bit like the difference between'; //użycie apostrofu z ukośnikiem by był interpretowany jako zwykły znak
+print_r($frameworks); //print_r nadaje się do tablic
+echo $frameworks[2]; //jeśli chcę sie odwołać do konkretnego elementu tablicy echo się nadaje
 ?>
